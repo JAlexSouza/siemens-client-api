@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  #Postgres Database
+  datasource:
+    url: jdbc:postgresql://localhost:15432/siemens
+    username: alex
+    password: alex
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    #hibernate:
+    #  ddl-auto: update
+  #flyway:
+    #enabled: true
+    #validate-on-migrate: true
