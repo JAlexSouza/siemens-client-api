@@ -2,17 +2,14 @@ package com.siemens_energy.siemens_client_api.domain.entity;
 
 import com.siemens_energy.siemens_client_api.domain.enums.Gender;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
+@Data
 @Entity
 @Table(name = "CLIENT")
 public class Client {
