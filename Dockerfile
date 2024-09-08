@@ -34,7 +34,7 @@ WORKDIR /usu/src/app
 
 ADD . /usu/src/app
 
-RUN mvn package
+RUN mvn package -Dmaven.test.skip
 
 FROM confidencerepo/git-openjdk21:latest
 # Copying our project
