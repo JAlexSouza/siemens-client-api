@@ -1,7 +1,3 @@
-// CRIAR UM AMBIENTE COM JDK E MAVEN
-// COMPILAR A NOSSA APLICAÇÃO
-// EXECUTAR O COMMANDO DO JAVA PARA EXECUTAR A APLICAÇÃO
-
 # Use the official Ubuntu image as the base
 FROM ubuntu:20.04 as build
 
