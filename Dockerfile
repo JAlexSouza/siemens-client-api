@@ -27,23 +27,23 @@ ENV PATH="${MAVEN_HOME}/bin:${PATH}"
 RUN java -version && mvn -version
 
 # Copying our project
-RUN mkdir -p /usu/src/app
+RUN mkdir -p /usr/src/app
 
 # Set the working directory
-WORKDIR /usu/src/app
+WORKDIR /usr/src/app
 
-ADD . /usu/src/app
+ADD . /usr/src/app
 
 RUN mvn package -Dmaven.test.skip
 
 FROM confidencerepo/git-openjdk21:latest
 # Copying our project
-RUN mkdir -p /usu/src/app
+RUN mkdir -p /usr/src/app
 
 # Set the working directory
-WORKDIR /usu/src/app
+WORKDIR /usr/src/app
 
-COPY --from=build /usu/src/app/target/siemens-client-api-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /usr/src/app/target/siemens-client-api-0.0.1-SNAPSHOT.jar app.jar
 
 # Default command
 CMD ["java","-jar","app.jar"]
